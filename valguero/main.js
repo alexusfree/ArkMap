@@ -39,8 +39,8 @@ L.CRS.Wall = L.extend({}, L.CRS.Simple, {
 	transformation: new L.Transformation(1, 0, 1, 0)});	
 
 
-var layerBaseMap = L.imageOverlay('Valguero_Map.jpg', [[-2.4,-1.4], [101.3,99.5]]);
-var layerBaseMap2 = L.imageOverlay('Valguero_Topographic_Map.jpg', [[0,0], [100,100]]);
+var layerBaseMap = L.imageOverlay('map/Valguero_Map.jpg', [[-2.4,-1.4], [101.3,99.5]]);
+var layerBaseMap2 = L.imageOverlay('map/Valguero_Topographic_Map.jpg', [[0,0], [100,100]]);
 
 
 
