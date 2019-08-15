@@ -1,4 +1,4 @@
-var src_layer= [['marker','marker',[25, 41],[12, 41]],
+var src_layer= [['marker','marker',[23, 32],[11, 32]],
 		['Cave','Пещера',[25, 41],[12, 41]],
 		['Base','место под базу',[23, 32],[11, 32]],
 		['Artefact','Артефакт',[23, 32],[11, 32]],
@@ -54,19 +54,10 @@ var map = L.map('map', {
 		}).setView([50, 50], 3);
 
 
-// вторая горизонталь
-
-
-//var bounds = [[-2.4,-1.4], [101.3,99.5]];
-
-//var layerBaseMap = L.imageOverlay('Valguero_Map.jpg', [[-2.4,-1.4], [101.3,99.5]]).addTo(map);
-//var layerBaseMap2 = L.imageOverlay('Valguero_Topographic_Map.jpg', [[0,0], [100,100]]).addTo(map);
-
-
 var baseMaps = { 
 
-	'Чистая карта': layerBaseMap,
-	'Карта с': layerBaseMap2,
+	'Основная карта': layerBaseMap,
+	'Топографичечкая карта': layerBaseMap2,
 };
 
 //map.fitBounds([[0,0], [100,100]]);
@@ -95,13 +86,13 @@ map.addControl( controlSearch );
 
 
  var array_markers= [
-[0, 0, 0, "test ",''],
+/*[0, 0, 0, "test ",''],
 [0, 10, 10, "test ",''],
 [0, 10, 90, "test ",''],
 [0, 90, 90, "test ",''],
-[0, 100, 100, "test ",''],
+[0, 100, 100, "test ",''],*/
 
-//*
+
 [5, 84.8, 40.1, "Металл",''],
 [5, 25, 8.8, "Металл",''],
 [5, 38, 77, "Металл",''],
