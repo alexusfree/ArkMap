@@ -1,1 +1,0 @@
-https://www.google.ru/maps/vt/icon/name=assets/icons/poi/tactile/pinlet_outline_v2-1-small.png,assets/icons/poi/tactile/pinlet_shadow-1-small.png,assets/icons/poi/tactile/pinlet-1-small.png,assets/icons/poi/quantum/pinlet/home_pinlet-1-small.png&highlight=ffffff,ffffff,4285f4,ffffff&color=ff000000?scale=1
