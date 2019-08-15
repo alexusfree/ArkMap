@@ -1,4 +1,4 @@
-var src_layer= [['marker-icon','marker',[25, 41],[12, 41]],
+var src_layer= [['marker','marker',[25, 41],[12, 41]],
 		['Cave','Пещера',[25, 41],[12, 41]],
 		['Base','место под базу',[23, 32],[11, 32]],
 		['Artefact','Артефакт',[23, 32],[11, 32]],
@@ -11,12 +11,18 @@ var src_layer= [['marker-icon','marker',[25, 41],[12, 41]],
 ];
 //   alert( src_layer[0][2] );
 var layer = {};
-var overlays = {};			
+var overlays = {};
+var layerSearch={};		
 for (var i in src_layer){
         var s = src_layer[i];	
 	layer[s[0]] = new L.LayerGroup();
 	overlays['<big>'+s[1]+'</big>'] = layer[s[0]];
+	layerSearch[i]=layer[s[0]];
  };
+
+var layerSearch= L.layerGroup([
+	layer["marker"], layer["Cave"], layer["Base"], layer["Artefact"], layer["Note"], layer["Metal"], layer["Crystal"], layer["interest"], layer["Oil"], layer["lut"]]);
+
 
 var markerIconTypes = [];
 for (var i in src_layer){
@@ -42,8 +48,7 @@ var map = L.map('map', {
 		crs: L.CRS.Wall,
 		minZoom: 3,
 		maxZoom: 8,
-//		layers:[layerBaseMap, layer["Cave"]],
-	        layers:[layerBaseMap, layer["Cave"], layer["Base"], layer["Artefact"], layer["Note"]],
+	        layers:[layerBaseMap, layerSearch],
 	fullscreenControl: true,
 	fullscreenControlOptions: {position: 'topleft' },
 		}).setView([50, 50], 3);
@@ -70,6 +75,21 @@ var baseMaps = {
 
 L.control.layers(baseMaps, overlays).addTo(map);
 var hash = new L.Hash(map);
+
+	
+var controlSearch = new L.Control.Search({
+		position:'topright',
+		layer: layerSearch,		
+//		layer: [overlays],
+		initial: false,
+		zoom: 5,
+		marker: false,
+		textErr: 'Место не найдено',
+		textCancel: 'Сбросить',			
+		textPlaceholder: 'Поиск…       ',	
+	});
+map.addControl( controlSearch );
+
 
 
 
@@ -316,9 +336,8 @@ var hash = new L.Hash(map);
 for (var i in array_markers){// перебераем строки
    var s = array_markers[i];	// s текущая строка
    L.marker({lat:s[1],lng:s[2]},{title:s[3]+" "+s[1]+" "+s[2],icon:markerIconTypes[s[0]]})
+   .bindPopup("<font color='#636363'>"+s[3]+"</font><br>"+s[4]+"<br> "+s[1]+" "+s[2]).addTo(layer[src_layer[s[0]][0]]);
 //   .bindPopup("<font color='#636363'>"+s[3]+"</font><br>"+s[4]+"<br> "+s[1]+" "+s[2]).addTo(map);
-
-   .bindPopup("<font color='#636363'>"+s[3]+"</font><br>"+s[4]+"<br> "+s[1]+" "+s[2]).addTo(map);
 //alert( s[0] );layer["Cave"]
 };
 
