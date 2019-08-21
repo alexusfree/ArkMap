@@ -9,33 +9,159 @@
 		<meta name="keywords" content="ark карта, the island, карта island, карта ark survival, ark survival evolved карта, ark map, карта арк">
 		<meta property="og:image" content="socimage.png" />
 		<meta property="og:title" content="Карта ARK: Survival Evolved" />
-		<link rel="canonical" href="ark-map/" />
-        <link rel="icon" type="image/x-icon" href="assets/images/favicons/favicon.ico" />
-		<link rel="stylesheet" href="assets/css/plax.css">
+	<link rel="canonical" href="ark-map/" />
+        <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico" />
+	<link rel="stylesheet" href="assets/css/plax.css">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/theme.min.css">
         <link rel="stylesheet" href="assets/css/color-defaults.min.css">
         <link rel="stylesheet" href="assets/css/swatch-black-beige.min.css">
         <link rel="stylesheet" href="assets/css/swatch-white-green.min.css">
         <link rel="stylesheet" href="assets/css/fonts.min.css" media="screen">
+<link rel="stylesheet" href="js/leaflet.css" />
+<link rel="stylesheet" href="js/leaflet-search.css" />
+<link rel="stylesheet" href="js/Control.Coordinates.css" />
+<link rel="stylesheet" href="js/Control.FullScreen.css" />        
+ <script src="js/leaflet.js"></script>
+<script src="js/leaflet-hash.js"></script>
+<script src="js/leaflet-search.js"></script>
+<script src='js/Leaflet.LocationShare.js'></script>	
+<script src="js/Control.Coordinates.js"></script>
+<script src="js/Control.FullScreen.js"></script>       
+        
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     </head>
     <body>
+        <header id="masthead" class="navbar navbar-sticky swatch-black-beige" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand">
+                        <img src="assets/images/logo.png" alt="Сервер ARK - The Universe" title="Сервер ARK - The Universe">The Universe
+                    </a>
+                </div>
+                <nav class="collapse navbar-collapse main-navbar" role="navigation">
+                    <ul class="nav navbar-nav navbar-right">
+		  <!--  <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Меню сайта</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ark-map/">Карта The Island</a>
+                                </li>
+                                <li><a href="https://ark-universe.ru/ark-map-thecenter/">Карта The Center</a>
+                                </li>
+                                <li><a href="https://ark-universe.ru/playerstats-calculator/">Калькулятор стат игрока</a>
+                                </li>
+								<li><a target="blank" href="https://pvpshop.ark-universe.ru/">PVP магазин</a>
+                                </li>
+							    <li><a target="blank" href="https://pveshop.ark-universe.ru/">PVE магазин</a>
+                                </li>
+                            </ul>
+                        </li>
+					    <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Соц. сети</a>
+                            <ul class="dropdown-menu">
+								<li><a target="blank" href="https://vk.com/rusark"><img src="https://maxcdn.icons8.com/Color/PNG/24/Social_Networks/vk_com-24.png" title="ВКонтакте" width="24" height="24">Вконтакте</a>
+                                </li>
+								<li><a target="blank" href="https://twitter.com/ARK_TheUniverse"><img src="https://maxcdn.icons8.com/Color/PNG/24/Social_Networks/twitter-24.png" title="Твиттер" width="24" height="24">Twitter</a>
+                                </li>
+								<li><a target="blank" href="https://www.facebook.com/ARKTheUniverse"><img src="https://maxcdn.icons8.com/Color/PNG/24/Social_Networks/facebook-24.png" title="Facebook" width="24" height="24">Facebook</a>
+                                </li>
+                            </ul>
+                        </li>
 
-<link rel="stylesheet" href="assets/css/leaflet.css" /> 
-<div id="simplemap"></div><div align="center"><div id="map" style="width: 100%; height: 1000px;"></div>
-	
-<!--div id="map" style="width: 1000px; height: 1000px;"></div-->
+        -->                
+			<li class="dropdown">
+                            <a href="Island.html">Island</a>
+                        </li>
+                        <li class="dropdown">
+				<a href="Ragnarok.html">Ragnarok</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="Valguero.html">Valguero</a>
+                        </li>
 
-		    <script src="scripts/leaflet.js"></script>
-	
-		    <script src="scripts/map.js"></script>		    
-Оригинал карты: ark-survival.net</div>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
 
+
+	        
+        
+        <div id="content" role="main">
+            <section class="section swatch-black-beige ">
+                <div class="container">
+        <!--            <header class="section-header text-center underline">
+						<p class="">Вашему вниманию представлена полная карта The Island из игры ARK:SE</p>
+					</header>123-->
+		    <div id="simplemap"></div>
+		    <div align="center">
+		    			<li class="dropdown">
+                            <a href="Island.html" target="_blank">The Island</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="Island2/index.html" target="_blank">The Island второй вариант</a>
+                        </li>
+                        <li class="dropdown">
+				<a href="Ragnarok.html" target="_blank">Ragnarok</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="Valguero.html" target="_blank">Valguero</a>
+                        </li>
+<!--		    
+<div id="map" style="width: 100%; height: 1000px;  background:#202020"></div>			
+<script src="Island.js"></script>		    
+
+<div id="map" style="width: 100%; height: 100%;"></div>
+<div id="map" style="width: 100%;  background:#202020;"></div>			
+<div id="map" style="width: 100%; height: 100%;"></div>
+<div id="map" style="width: 100%; height: 1000px;  background:#202020"></div>			
+-->	    
+
+		    </div>
+		 </div>
+
+
+
+
+			
+			
+            </section>
+<!--            <section class="section swatch-white-green has-top has-top parallax parallax-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+				<div id="text-4" class="sidebar-widget widget_text">
+                                    <div class="textwidget">ИГРОВОЙ СЕРВЕР THE UNIVERSE © 2015-2018 ВСЕ ПРАВА НЕ НАРУШЕНЫ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>-->
+        </div>
         <a class="go-top hex-alt" href="javascript:void(0)">
             <i class="fa fa-angle-up"></i>
         </a>
         <script src="assets/js/packages.min.js"></script>
         <script src="assets/js/theme.min.js"></script>
-
+<!--
+<script type="text/javascript">
+$(document).ready(function(){
+$("a[href*=#]").on("click", function(e){
+var anchor = $(this);
+$('html, body').stop().animate({
+scrollTop: $(anchor.attr('href')).offset().top
+}, 800);
+e.preventDefault();
+return false;
+});
+});
+</script>-->
 </body>
 </html>

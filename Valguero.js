@@ -49,6 +49,7 @@ var map = L.map('map', {
 		minZoom: 3,
 		maxZoom: 8,
 	        layers:[layerBaseMap, layerSearch],
+	        noWrap: true,
 	fullscreenControl: true,
 	fullscreenControlOptions: {position: 'topleft' },
 		}).setView([50, 50], 3);
@@ -61,7 +62,6 @@ var baseMaps = {
 };
 
 //map.fitBounds([[0,0], [100,100]]);
-
 
 
 L.control.layers(baseMaps, overlays).addTo(map);

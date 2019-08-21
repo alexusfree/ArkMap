@@ -1,0 +1,24 @@
+/* ============================================================
+  SECTIONS
+============================================================ */
+.parallax {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.parallax-1 {
+  background-image: url("/bg.jpg");
+}
+.parallax-2 {
+  background-image: url("/bg2.jpg");
+}
+.parallax-3 {
+  background-image: url("/foot.jpg");
+}
+.parallax-4 {
+  background-image: url("/ft.jpg");
+}
